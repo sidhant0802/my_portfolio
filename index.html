@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!-- Space Intro Animation -->
+    <div id="space-intro">
+        <div class="intro-content">
+            <h1 class="space-title">SIDHANT NIRUPAM</h1>
+            <!-- <p class="space-subtitle">Entering the Digital Universe...</p> -->
+            <div class="cosmic-ring ring-1"></div>
+            <div class="cosmic-ring ring-2"></div>
+            <div class="cosmic-ring ring-3"></div>
+        </div>
+    </div>
+
+    <div class="nebula"></div>
+    <div class="asteroid asteroid-1"></div>
+    <div class="asteroid asteroid-2"></div>
+    <div class="asteroid asteroid-3"></div>
+    <div class="asteroid asteroid-4"></div>
+    <div class="asteroid asteroid-5"></div>
+    <div class="asteroid asteroid-6"></div>
+    <div class="comet comet-1"></div>
+    <div class="comet comet-2"></div>
+    <div class="comet comet-3"></div>
+    <canvas id="starfield"></canvas>
+     <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+            <li><a href="#profiles" class="mobile-nav-link">Coding Profiles</a></li>
+            <li><a href="#education" class="mobile-nav-link">Education</a></li>
+            <li><a href="#accomplishments" class="mobile-nav-link">Accomplishments</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#coursework" class="mobile-nav-link">Coursework</a></li>
+        </ul>
+    </div>
+    
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#profiles" class="nav-link">Coding Profiles</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#accomplishments" class="nav-link">Accomplishments</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#coursework" class="nav-link">Coursework</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="home" class="section visible">
+            <div class="profile-image-container">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=500&fit=crop" alt="Profile" class="profile-image">
+            </div>
+            <h1 class="hero-title">Sidhant Nirupam</h1>
+            <p class="hero-subtitle">Computer Science & Engineering Student | IIT Patna</p>
+            <div class="contact-info">
+                <div>📱 <a href="tel:+917061901723">+91 7061901723</a></div>
+                <div>📧 <a href="mailto:sidhantnirupam@gmail.com">sidhantnirupam@gmail.com</a></div>
+                <div>🎓 Bachelor of Technology - CGPA: 8.72</div>
+                <div>📅 July 2024 – May 2028</div>
+            </div>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </section>
+
+        <section id="profiles" class="section">
+            <h2>🏆 Competitive Programming Profiles</h2>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="platform-name">Codeforces</div>
+                    <div class="rating-info">Current Rating: <span class="current-rating" id="cf-current">Loading...</span></div>
+                    <div class="rating-info">Max Rating: <span class="max-rating" id="cf-max">Loading...</span></div>
+                    <div class="rating-info">Rank: <span id="cf-rank">Specialist</span></div>
+                    <a href="https://codeforces.com/profile/Sidhant08" target="_blank" class="profile-link">View Profile</a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="platform-name">CodeChef</div>
+                    <div class="rating-info">Current Rating: <span class="current-rating" id="cc-current">1831</span></div>
+                    <div class="rating-info">Max Rating: <span class="max-rating" id="cc-max">1831</span></div>
+                    <div class="rating-info">Stars: <span id="cc-stars">4⭐</span></div>
+                    <a href="https://www.codechef.com/users/sidhant_8" target="_blank" class="profile-link">View Profile</a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="platform-name">LeetCode</div>
+                    <div class="rating-info">Current Rating: <span class="current-rating" id="lc-current">1783</span></div>
+                    <div class="rating-info">Max Rating: <span class="max-rating" id="lc-max">1783</span></div>
+                    <div class="rating-info">Problems Solved: <span id="lc-solved">1000+</span></div>
+                    <a href="https://leetcode.com/u/sidhant_8/" target="_blank" class="profile-link">View Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>🎓 Education</h2>
+            <div class="card">
+                <h3>Indian Institute of Technology Patna</h3>
+                <p><strong>Bachelor of Technology in Computer Science and Engineering</strong></p>
+                <p>CGPA: <span style="color: #10b981; font-weight: bold;">8.72</span></p>
+                <p>Duration: July 2024 – May 2028</p>
+                <p>Location: Patna, India</p>
+            </div>
+            <div class="card">
+                <h3>Kiran Public School, Madhepura</h3>
+                <p><strong>Central Board of Secondary Education</strong></p>
+                <p>Percentage: <span style="color: #10b981; font-weight: bold;">94.4%</span></p>
+            </div>
+        </section>
+
+        <section id="accomplishments" class="section">
+            <h2>🏅 Accomplishments</h2>
+            <div class="card">
+                <ul>
+                    <li><span class="highlight">Specialist</span> on Codeforces with a <span class="highlight">maximum rating of 1461</span></li>
+                    <li><span class="highlight">4-Star Coder</span> on CodeChef with a <span class="highlight">maximum rating of 1831</span></li>
+                    <li>Maximum rating of <span class="highlight">1783 on LeetCode</span></li>
+                    <li>Secured <span class="highlight">Rank 42</span> among <span class="highlight">14,000+ participants</span> in CodeChef Starters 188 (Div 4)</li>
+                    <li>Achieved <span class="highlight">All India Rank (AIR) 5642</span> out of <span class="highlight">1.8 lakh+ candidates</span> in JEE Advanced 2024</li>
+                    <li>Secured <span class="highlight">All India Rank (AIR) 5035</span> out of <span class="highlight">14 lakh+ candidates</span> in JEE Mains 2024</li>
+                    <li>Solved around <span class="highlight">1000+ problems</span> across different platforms: LeetCode, Codeforces, CodeChef, AtCoder, GeeksforGeeks</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>💻 Skills</h2>
+            <div class="card">
+                <h3>Languages</h3>
+                <div class="info-grid">
+                    <div class="info-item">C</div>
+                    <div class="info-item">C++</div>
+                    <div class="info-item">HTML</div>
+                    <div class="info-item">CSS</div>
+                    <div class="info-item">JavaScript</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Operating Systems/Services</h3>
+                <div class="info-grid">
+                    <div class="info-item">MacOS</div>
+                    <div class="info-item">Windows</div>
+                    <div class="info-item">Linux</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coursework" class="section">
+            <h2>📚 Relevant Coursework</h2>
+            <div class="card">
+                <div class="info-grid">
+                    <div class="info-item">Data Structures and Algorithms</div>
+                    <div class="info-item">Discrete Mathematics</div>
+                    <div class="info-item">Optimization Techniques</div>
+                    <div class="info-item">Artificial Intelligence</div>
+                    <div class="info-item">Calculus and Linear Algebra</div>
+                    <div class="info-item">Probability Theory</div>
+                    <div class="info-item">Ordinary Differential Equations</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>🎯 Interests</h3>
+                <p style="font-size: 1.2rem;">Competitive Programming • Chess • Reading Books</p>
+            </div>
+        </section>
+    </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
