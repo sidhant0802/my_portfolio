@@ -1085,7 +1085,7 @@ means it hide everything */
         #accomplishments.visible li:nth-child(7) { transition-delay: 0.7s; }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             nav {
                 display: none;
             }
