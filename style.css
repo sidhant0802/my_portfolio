@@ -14,7 +14,7 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
- /* Space Intro Animation */
+
 #space-intro {
     position:fixed;
     top:0;
@@ -27,7 +27,7 @@ body {
     justify-content:center;
     align-items:center;
     animation: intro1 1s ease-out 4s forwards;
-    -webkit-animation: intro1 1s ease-out 4s forwards;
+    pointer-events: none;
 }
 
         /* #space-intro.hidden {
