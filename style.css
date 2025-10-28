@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -37,6 +37,7 @@ body {
 /* from above nd below only one is needed and opacity 0 
 means it hide everything */
 /* later think about hidden.] */
+
 @keyframes intro1 {
     from{
         opacity:1;
@@ -66,10 +67,8 @@ means it hide everything */
     opacity: 0;
     transform: scale(0.5) rotateX(90deg);
     animation: spac 2s ease-out 0.5s forwards;
-    /*text-shadow:  */        /* 0 0 20px rgba(139, 92, 246, 0.8), */        /* 0 0 40px rgba(139, 92, 246, 0.6), */        /* 0 0 60px rgba(139, 92, 246, 0.4), */        /* 0 0 80px rgba(236, 72, 153, 0.3);
-    */position: relative;
+    position: relative;
     z-index: 10;
-    -webkit-animation: spac 2s ease-out 0.5s forwards;
 }
 
 @keyframes spac{
@@ -107,9 +106,9 @@ means it hide everything */
             }
         }
 
-        /* Cosmic Rings */
+
         .cosmic-ring {
-            position: absolute;
+           position: absolute;
             border: 3px solid rgba(139, 92, 246, 0.5);
             border-radius: 50%;
             top: 50%;
@@ -211,7 +210,8 @@ means it hide everything */
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 0;
+            z-index: -1;
+            pointer-events: none;
         }
 
         /* Animated Nebula Background */
@@ -221,11 +221,12 @@ means it hide everything */
             height: 100%;
             top: 0;
             left: 0;
-            z-index: -1;
+            z-index: -2;
             background: 
                 radial-gradient(ellipse at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
             animation: nebulaDrift 15s ease-in-out infinite alternate;
+            pointer-events: none;
         }
 
         @keyframes nebulaDrift {
@@ -245,7 +246,7 @@ means it hide everything */
             background: rgba(139, 92, 246, 0.3);
             border-radius: 50%;
             opacity: 0.5;
-            z-index: 0;
+            z-index: -1;
             pointer-events: none;
         }
 
@@ -362,7 +363,7 @@ means it hide everything */
             background: #fff;
             border-radius: 50%;
             box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
-            z-index: 0;
+            z-index: -1;
             pointer-events: none;
         }
 
@@ -631,16 +632,18 @@ means it hide everything */
             z-index: 9999;
             opacity: 0;
             transition: opacity 0.3s;
+            pointer-events: none;
         }
 
         .mobile-overlay.active {
             opacity: 1;
+            pointer-events: auto;
         }
 
         /* Content Container */
         .content {
             position: relative;
-            z-index: 1;
+            z-index: 10;
             padding-top: 100px;
         }
 
@@ -935,6 +938,7 @@ means it hide everything */
             background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.3), transparent);
             transform: rotate(45deg);
             animation: shine 3s infinite;
+            pointer-events: none;
         }
 
         @keyframes shine {
@@ -979,6 +983,8 @@ means it hide everything */
             border-radius: 8px;
             transition: all 0.3s;
             font-weight: 600;
+            position: relative;
+            z-index: 100;
         }
 
         .profile-link:hover {
