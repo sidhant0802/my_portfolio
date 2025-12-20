@@ -1,4 +1,4 @@
-// Enhanced Starfield Animation - More Dynamic
+
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -7,8 +7,7 @@
         const stars = [];
         const shootingStars = [];
         const movingCircles = [];
-        
-        // Regular stars - smaller and blinking
+
         for (let i = 0; i < 500; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
@@ -21,7 +20,6 @@
             });
         }
 
-        // Create moving circles
         function createMovingCircle() {
             const size = 2 + Math.random() * 4;
             movingCircles.push({
@@ -37,12 +35,11 @@
             });
         }
 
-        // Initialize moving circles
+
         for (let i = 0; i < 20; i++) {
             createMovingCircle();
         }
 
-        // Create shooting/breaking star
         function createShootingStar() {
             shootingStars.push({
                 x: Math.random() * canvas.width,
@@ -55,7 +52,6 @@
             });
         }
 
-        // Create breaking star effect
         function breakStar(x, y) {
             const particleCount = 8 + Math.random() * 8;
             const particles = [];
@@ -74,7 +70,6 @@
             return particles;
         }
 
-        // Shooting stars with breaking effect
         setInterval(() => {
             if (Math.random() < 0.5) createShootingStar();
         }, 1500);
@@ -82,7 +77,6 @@
         function animateStars() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Draw regular blinking stars
             stars.forEach(star => {
                 star.blinkPhase += star.twinkleSpeed;
                 star.opacity = 0.3 + Math.abs(Math.sin(star.blinkPhase)) * 0.7;
@@ -102,7 +96,6 @@
                 ctx.fill();
             });
 
-            // Draw moving circles
             movingCircles.forEach((circle, index) => {
                 circle.x += circle.vx;
                 circle.y += circle.vy;
@@ -133,7 +126,6 @@
                 ctx.fill();
             });
 
-            // Draw shooting stars with breaking effect
             shootingStars.forEach((star, index) => {
                 star.x += Math.cos(star.angle) * star.speed;
                 star.y += Math.sin(star.angle) * star.speed;
@@ -214,7 +206,6 @@
             canvas.height = window.innerHeight;
         });
 
-        // Space Intro Effects
         const spaceIntro = document.getElementById('space-intro');
         const introContent = document.querySelector('.intro-content');
 
@@ -254,7 +245,6 @@
             spaceIntro.classList.add('hidden');
         }, 5000);
 
-        // Smooth scroll and section animations
         const sections = document.querySelectorAll('.section');
         const navLinks = document.querySelectorAll('.nav-link');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -262,7 +252,6 @@
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileOverlay = document.getElementById('mobileOverlay');
 
-        // Mobile menu toggle
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
@@ -270,7 +259,6 @@
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close menu when clicking overlay
         mobileOverlay.addEventListener('click', () => {
             menuToggle.classList.remove('active');
             mobileMenu.classList.remove('active');
@@ -278,7 +266,6 @@
             document.body.style.overflow = '';
         });
 
-        // Mobile nav link clicks
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -328,7 +315,6 @@
             observer.observe(section);
         });
 
-        // Navbar scroll effect
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -343,7 +329,6 @@
             lastScroll = currentScroll;
         });
 
-        // Smooth scroll on nav click
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -357,7 +342,6 @@
             });
         });
 
-        // Fetch Codeforces Data
         async function fetchCodeforcesData() {
             try {
                 const response = await fetch('https://codeforces.com/api/user.info?handles=Sidhant08');
@@ -377,5 +361,4 @@
             }
         }
 
-        // Load profile data
         fetchCodeforcesData();
